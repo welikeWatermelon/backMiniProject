@@ -28,9 +28,15 @@ public class NotificationController {
         return ResponseEntity.ok().build();
     }
 
+    // 0520 추가 - notification 목록을 택했을 때, 오늘 알림들이 나오는 것
+    @GetMapping("/today")
+    public ResponseEntity<List<NotificationResponse>> getTodayNotifications(@RequestParam Long userId) {
+        return ResponseEntity.ok(notificationService.getTodayNotifications(userId));
+    }
+
     @PostMapping("/read/{id}")
     public ResponseEntity<Void> readNotification(@PathVariable Long id) {
-        notificationService.markAsRead(id);
+        notificationService.markAsRead(id);  // ✅ 읽음 처리 서비스 호출
         return ResponseEntity.ok().build();
     }
 }
