@@ -2,8 +2,8 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.Pharmacist;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.user.Pharmacist;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.domain.enums.Gender;
 import ssafy.project07.domain.enums.UserRole;
 import ssafy.project07.dto.user.*;
@@ -60,25 +60,6 @@ public class UserService {
         // ✅ 로그인 응답 반환
         return new UserLoginResponse(token,user.getId());
     }
-
-
-//    public User userLogin(UserLoginRequest userLoginRequest) {
-//        String email = userLoginRequest.getEmail();
-//        String password = userLoginRequest.getPassword();
-//
-//        // 1. 이메일로 유저 조회
-//        User user = userRepository.findByEmail(email)
-//                .orElseThrow(() -> new IllegalArgumentException("해당 이메일의 유저가 존재하지 않습니다."));
-//
-//
-//        // 2. 비밀번호 검증
-//        if (!user.getPassword().equals(password)) {
-//            throw new IllegalArgumentException("비밀번호가 올바르지 않습니다.");
-//        }
-//
-//        // 3, 성공 시 User 반환
-//        return user;
-//    }
 
     public UserProfileResponse profileGet(Long userId) {
         User user = userRepository.findById(userId)

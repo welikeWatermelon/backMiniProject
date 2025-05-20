@@ -3,7 +3,7 @@ package ssafy.project07.domain.calender;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.user.User;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

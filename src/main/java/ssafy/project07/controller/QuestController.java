@@ -1,15 +1,11 @@
 package ssafy.project07.controller;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ssafy.project07.domain.Quest;
-import ssafy.project07.domain.QuestHistory;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.quest.Quest;
+import ssafy.project07.domain.quest.QuestHistory;
 import ssafy.project07.dto.quest.QuestCompleteRequest;
-import ssafy.project07.repository.user.UserRepository;
 import ssafy.project07.service.QuestService;
-import ssafy.project07.service.UserService;
 
 import java.util.List;
 

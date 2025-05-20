@@ -2,7 +2,7 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.Notification;
+import ssafy.project07.domain.notification.Notification;
 import ssafy.project07.dto.notification.NotificationResponse;
 import ssafy.project07.repository.notification.NotificationRepository;
 

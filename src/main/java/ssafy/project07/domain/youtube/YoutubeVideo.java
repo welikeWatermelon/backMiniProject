@@ -1,4 +1,4 @@
-package ssafy.project07.domain;
+package ssafy.project07.domain.youtube;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

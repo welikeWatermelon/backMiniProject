@@ -1,7 +1,7 @@
 package ssafy.project07.repository.column;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ssafy.project07.domain.Column;
+import ssafy.project07.domain.column.Column;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
-package ssafy.project07.domain;
+package ssafy.project07.domain.follow;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
+import ssafy.project07.domain.user.Pharmacist;
+import ssafy.project07.domain.user.User;
 
 @Entity
 @Getter

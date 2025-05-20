@@ -1,6 +1,6 @@
 package ssafy.project07.repository.youtube;
 
-import ssafy.project07.domain.YoutubeVideo;
+import ssafy.project07.domain.youtube.YoutubeVideo;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

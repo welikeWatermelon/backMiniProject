@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.column.ColumnRequest;
 import ssafy.project07.dto.column.ColumnResponse;
 import ssafy.project07.service.ColumnService;

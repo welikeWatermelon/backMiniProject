@@ -2,8 +2,8 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.CommunityPost;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.community.CommunityPost;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.community.CommunityRequest;
 import ssafy.project07.dto.community.CommunityResponse;
 import ssafy.project07.repository.community.CommunityRepository;

@@ -2,9 +2,9 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.Column;
-import ssafy.project07.domain.Pharmacist;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.column.Column;
+import ssafy.project07.domain.user.Pharmacist;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.column.ColumnRequest;
 import ssafy.project07.dto.column.ColumnResponse;
 import ssafy.project07.repository.column.ColumnRepository;
@@ -13,7 +13,6 @@ import ssafy.project07.repository.pharmacist.PharmacistRepository;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

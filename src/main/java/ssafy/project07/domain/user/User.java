@@ -1,11 +1,18 @@
-package ssafy.project07.domain;
+package ssafy.project07.domain.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import ssafy.project07.domain.badge.UserBadge;
+import ssafy.project07.domain.community.Comment;
+import ssafy.project07.domain.community.CommunityPost;
 import ssafy.project07.domain.enums.Gender;
 import ssafy.project07.domain.enums.UserRole;
 import ssafy.project07.domain.calender.CalendarLog;
+import ssafy.project07.domain.follow.Follow;
+import ssafy.project07.domain.notification.Notification;
+import ssafy.project07.domain.quest.QuestHistory;
+import ssafy.project07.domain.supplement.SupplementIntake;
 
 import java.time.LocalDate;
 import java.util.List;

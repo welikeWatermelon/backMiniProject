@@ -5,7 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.calendar.IntakeRecordRequest;
 import ssafy.project07.dto.calendar.DailySummaryResponse;
 import ssafy.project07.service.CalendarService;

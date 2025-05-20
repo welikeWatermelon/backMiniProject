@@ -1,4 +1,4 @@
-package ssafy.project07.domain;
+package ssafy.project07.domain.supplement;
 
 import jakarta.persistence.*;
 import lombok.Getter;

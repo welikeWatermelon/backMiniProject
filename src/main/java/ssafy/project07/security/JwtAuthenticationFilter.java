@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.repository.user.UserRepository;
 
 import java.io.IOException;

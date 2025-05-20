@@ -2,8 +2,8 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.Badge;
-import ssafy.project07.domain.UserBadge;
+import ssafy.project07.domain.badge.Badge;
+import ssafy.project07.domain.badge.UserBadge;
 import ssafy.project07.dto.badge.BadgeResponse;
 import ssafy.project07.repository.badge.BadgeRepository;
 import ssafy.project07.repository.badge.UserBadgeRepository;

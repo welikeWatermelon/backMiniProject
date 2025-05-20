@@ -2,9 +2,9 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.Follow;
-import ssafy.project07.domain.Pharmacist;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.follow.Follow;
+import ssafy.project07.domain.user.Pharmacist;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.follow.FollowRequest;
 import ssafy.project07.dto.follow.FollowResponse;
 import ssafy.project07.repository.follow.FollowRepository;

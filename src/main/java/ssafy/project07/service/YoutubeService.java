@@ -38,19 +38,6 @@ public class YoutubeService {
 
         List<YoutubeResponseMini> items = response.getBody().getItems();
 
-        /// /////////////////////////////////////////////////////////////////////////
-        // ✅ 여기서 직접 확인 로그 출력
-        System.out.println("===== 유튜브 영상 목록 =====");
-        for (int i = 0; i < items.size(); i++) {
-            String videoId = items.get(i).getId().getVideoId();
-            String thumbnailUrl = items.get(i).getSnippet().getThumbnails().getMedium().getUrl();
-            String youtubeUrl = "https://www.youtube.com/watch?v=" + videoId;
-
-            System.out.printf("[%d] 유튜브 링크: %s%n", i + 1, youtubeUrl);
-            System.out.printf("[%d] 썸네일 URL: %s%n", i + 1, thumbnailUrl);
-        }
-        /// /////////////////////////////////////////////////////////////////////////
-
 
         return items.stream()
                 .map(item -> {

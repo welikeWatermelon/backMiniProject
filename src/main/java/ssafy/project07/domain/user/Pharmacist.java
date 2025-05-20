@@ -1,8 +1,10 @@
-package ssafy.project07.domain;
+package ssafy.project07.domain.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import ssafy.project07.domain.follow.Follow;
+import ssafy.project07.domain.column.Column;
 
 import java.util.List;
 

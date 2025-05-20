@@ -4,9 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.user.*;
-import ssafy.project07.repository.user.UserRepository;
 import ssafy.project07.service.UserService;
 
 @RestController
@@ -21,10 +20,6 @@ public class UserController {
         userService.userRegister(userRegisterRequest);
     }
 
-//    @PostMapping("/login")
-//    public void login(@RequestBody UserLoginRequest userLoginRequest) {
-//        userService.userLogin(userLoginRequest);
-//    }
 
     // 토큰 발급
     @PostMapping("/login")

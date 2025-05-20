@@ -1,7 +1,7 @@
 package ssafy.project07.repository.notification;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ssafy.project07.domain.Notification;
+import ssafy.project07.domain.notification.Notification;
 
 import java.util.List;
 

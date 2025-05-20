@@ -2,9 +2,9 @@ package ssafy.project07.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ssafy.project07.domain.Quest;
-import ssafy.project07.domain.QuestHistory;
-import ssafy.project07.domain.User;
+import ssafy.project07.domain.quest.Quest;
+import ssafy.project07.domain.quest.QuestHistory;
+import ssafy.project07.domain.user.User;
 import ssafy.project07.dto.quest.QuestCompleteRequest;
 import ssafy.project07.repository.quest.QuestHistoryRepository;
 import ssafy.project07.repository.quest.QuestRepository;
@@ -48,12 +48,6 @@ public class QuestService {
     }
 
     public List<QuestHistory> historyListService(Long userId) {
-//        User user = userRepository.findById(userId)
-//                .orElseThrow(() -> new IllegalArgumentException("에러 !"));
-//
-//        List<QuestHistory> questHistoryList = user.getQuestHistories();
-//        return questHistoryList;
-
         return questHistoryRepository.findByUserId(userId); // 안정적
     }
 
