@@ -3,6 +3,8 @@ package ssafy.project07.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ssafy.project07.domain.notification.Notification;
+import ssafy.project07.domain.user.User;
+import ssafy.project07.dto.notification.NotificationRequest;
 import ssafy.project07.dto.notification.NotificationResponse;
 import ssafy.project07.repository.notification.NotificationRepository;
 
@@ -33,4 +35,19 @@ public class NotificationService {
         noti.setIsRead(true);
         notificationRepository.save(noti);
     }
+
+    // 새로운 메서드 0520
+    public void registerNotification(Long userId, NotificationRequest request) {
+        Notification notification = new Notification();
+        notification.setMessage(request.getMessage());
+        notification.setIsRead(false); // 새 알림은 기본적으로 읽지 않음
+        notification.setNotifiedAt(request.getNotifiedAt());
+
+        User user = new User(); // ID만 설정해서 연관관계 연결
+        user.setId(userId);
+        notification.setUser(user);
+
+        notificationRepository.save(notification);
+    }
+
 }
