@@ -14,6 +14,7 @@ public class Quest {
     @Id
     @GeneratedValue
     private Long id;
+
     private String title;
     private String description;
     private int point;
