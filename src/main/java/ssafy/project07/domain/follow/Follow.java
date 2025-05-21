@@ -9,15 +9,22 @@ import ssafy.project07.domain.user.User;
 @Entity
 @Getter
 @Setter
+@Table(
+        name = "follow",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = {"user_id", "pharmacist_id"})
+        }
+)
 // N:M 가운데 지점
 public class Follow {
     @Id @GeneratedValue
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "pharmacist_id")
+    @ManyToOne
+    @JoinColumn(name = "pharmacist_id", nullable = false)
     private Pharmacist pharmacist;
 }
