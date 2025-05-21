@@ -18,6 +18,7 @@ public class CommunityPost {
     private String content;
 //    private String imageUrl;
     private String authorName;
+    private Integer viewCount;
 
     @ElementCollection
     private List<String> supplementTags;

@@ -78,10 +78,13 @@
 
                 int recommended = recommendedIntakeRepository.findByNutrientName(name)
                         .map(DailyRecommendedIntake::getRecommendedAmountMg)
-                        .orElse(0);
+                        .orElse(-1);
 
                 String message;
-                if (totalTaken > recommended) {
+                // recommended == -1 일때 코드 변경 (0521)
+                if (recommended == -1) {
+                    message = name + "는 등록된 영양제 정보가 없습니다. 관리자에게 문의해주세요.";
+                } else if (totalTaken > recommended) {
                     message = name + "를 " + (totalTaken - recommended) + "mg 초과 섭취하셨습니다. 내일은 조금 줄여보아요!";
                 } else if (totalTaken < recommended) {
                     message = name + "을 " + (recommended - totalTaken) + "mg 덜 섭취하셨습니다. 내일은 조금 더 늘려보아요!";

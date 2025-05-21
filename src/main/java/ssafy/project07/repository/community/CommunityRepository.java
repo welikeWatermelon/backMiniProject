@@ -10,4 +10,6 @@ public interface CommunityRepository extends JpaRepository<CommunityPost, Long> 
     List<CommunityPost> findAllByOrderByCreatedAtDesc();
 
     List<CommunityPost> findAllByOrderByTitleAsc();
+
+    List<CommunityPost> findAllByOrderByViewCountDesc(); // 🔥 조회수순 정렬
 }

@@ -16,4 +16,5 @@ public class CommunityResponse {
     private String authorName;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private Integer viewCount;
 }

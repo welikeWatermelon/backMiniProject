@@ -23,15 +23,11 @@ public class CommentService {
     private final UserRepository userRepository;
     private final CommunityRepository communityRepository;
 
-
-
     public List<CommentResponse> getCommentsByPostId(Long postId) {
         return commentRepository.findByCommunityPostId(postId).stream()
                 .map(this::convertToResponse)
                 .collect(Collectors.toList());
     }
-
-
 
     public Long save(User user, Long postId, CommentRequest request) {
 
@@ -46,8 +42,6 @@ public class CommentService {
 
         return commentRepository.save(comment).getId();
     }
-
-
 
     public void delete(User user, Long postId, Long commentId) {
         Comment comment = commentRepository.findById(commentId)

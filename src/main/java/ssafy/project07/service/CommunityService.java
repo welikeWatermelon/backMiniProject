@@ -26,6 +26,8 @@ public class CommunityService {
             posts = communityRepository.findAllByOrderByCreatedAtDesc();
         } else if ("title".equals(sort)) { //제목순
             posts = communityRepository.findAllByOrderByTitleAsc();
+        } else if ("popular".equals(sort)) {
+            posts = communityRepository.findAllByOrderByViewCountDesc(); // 🔥 추가
         }
         return posts.stream().map(this::convertToResponse).collect(Collectors.toList());
     }
@@ -34,6 +36,9 @@ public class CommunityService {
     public CommunityResponse getPostById(Long id) {
         CommunityPost post = communityRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다."));
+        post.setViewCount(post.getViewCount() + 1);
+        communityRepository.save(post);
+
         return convertToResponse(post);
     }
 
@@ -46,6 +51,7 @@ public class CommunityService {
         post.setUpdatedAt(LocalDateTime.now());
         post.setUser(user);
         post.setAuthorName(user.getName()); // ✅ 추가!
+        post.setViewCount(0);
 
         return communityRepository.save(post).getId();
     }
@@ -75,8 +81,6 @@ public class CommunityService {
         communityRepository.deleteById(id);
     }
 
-
-
     // 모든 게시글 정보에서 보기 쉽게 응답으로 바꾸는 것
     private CommunityResponse convertToResponse(CommunityPost post) {
         CommunityResponse res = new CommunityResponse();
@@ -85,6 +89,7 @@ public class CommunityService {
         res.setContent(post.getContent());
         res.setCreatedAt(post.getCreatedAt());
         res.setUpdatedAt(post.getUpdatedAt());
+        res.setViewCount(post.getViewCount());
         res.setAuthorName(post.getUser().getName()); // 필요시
         return res;
     }
